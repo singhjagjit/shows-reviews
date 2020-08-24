@@ -113,6 +113,7 @@ export default class Show extends Component {
           {
             headers: {
               "x-auth-token": localStorage.getItem("usertoken"),
+              "Access-Control-Allow-Origin": "*",
             },
           }
         )
@@ -142,6 +143,7 @@ export default class Show extends Component {
           {
             headers: {
               "x-auth-token": localStorage.getItem("usertoken"),
+              "Access-Control-Allow-Origin": "*",
             },
           }
         )
@@ -206,6 +208,7 @@ export default class Show extends Component {
         {
           headers: {
             "x-auth-token": localStorage.getItem("usertoken"),
+            "Access-Control-Allow-Origin": "*",
           },
         }
       )
@@ -221,6 +224,7 @@ export default class Show extends Component {
             {
               headers: {
                 "x-auth-token": localStorage.getItem("usertoken"),
+                "Access-Control-Allow-Origin": "*",
               },
             }
           )
