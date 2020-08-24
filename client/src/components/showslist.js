@@ -23,7 +23,7 @@ const Show = (props) => {
           <Card.Title>{props.name}</Card.Title>
           <Card.Text>Genre: {props.genre}</Card.Text>
           <Card.Text>Start Year: {props.year}</Card.Text>
-          <Button variant="info" as={NavLink} to={"/show/" + props.id}>
+          <Button variant="info" as={NavLink} to={"/" + props.id}>
             Add a review
           </Button>
         </Card.Body>
