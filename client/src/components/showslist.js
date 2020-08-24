@@ -67,7 +67,7 @@ export default class ShowList extends Component {
 
     axios
       .post(
-        "api/shows/search/",
+        "http://localhost:5000/api/shows/search/",
         { keyword: keyword },
         {
           headers: {

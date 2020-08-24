@@ -108,11 +108,14 @@ export default class Show extends Component {
         });
 
       axios
-        .get("api/shows/show/" + this.props.match.params.id, {
-          headers: {
-            "x-auth-token": localStorage.getItem("usertoken"),
-          },
-        })
+        .get(
+          "http://localhost:5000/api/shows/show/" + this.props.match.params.id,
+          {
+            headers: {
+              "x-auth-token": localStorage.getItem("usertoken"),
+            },
+          }
+        )
         .then((res) => {
           this.setState({
             show: res.data,
@@ -133,11 +136,15 @@ export default class Show extends Component {
         });
 
       axios
-        .get("api/shows/showReviews/" + this.props.match.params.id, {
-          headers: {
-            "x-auth-token": localStorage.getItem("usertoken"),
-          },
-        })
+        .get(
+          "http://localhost:5000/api/shows/showReviews/" +
+            this.props.match.params.id,
+          {
+            headers: {
+              "x-auth-token": localStorage.getItem("usertoken"),
+            },
+          }
+        )
         .then((res) => {
           this.setState({
             allreviews: res.data,
@@ -189,7 +196,7 @@ export default class Show extends Component {
 
     axios
       .post(
-        "api/shows/addReview",
+        "http://localhost:5000/api/shows/addReview",
         {
           review: this.state.review,
           stars: this.state.stars,
@@ -208,11 +215,15 @@ export default class Show extends Component {
           reviewadded: "success",
         });
         axios
-          .get("api/shows/showReviews/" + this.props.match.params.id, {
-            headers: {
-              "x-auth-token": localStorage.getItem("usertoken"),
-            },
-          })
+          .get(
+            "http://localhost:5000/api/shows/showReviews/" +
+              this.props.match.params.id,
+            {
+              headers: {
+                "x-auth-token": localStorage.getItem("usertoken"),
+              },
+            }
+          )
           .then((res) => {
             this.setState({
               allreviews: res.data,
