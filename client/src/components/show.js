@@ -88,7 +88,7 @@ export default class Show extends Component {
 
       axios
         .get(
-          `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${this.props.match.params.id}`
+          `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${this.props.match.params.id}`
         )
         .then((res) => {
           this.setState({
